@@ -9,8 +9,8 @@ body{
 }
 
 .grid-container{
-    width:100%;
-    max-width:980px;
+    width:92%;
+    margin:0 4%;
 }
 
 .grid-container *{
@@ -242,6 +242,11 @@ body{
 }
 
 @media (min-width: 992px){
+    .grid-container{
+        width:980px;
+        margin:0 auto;
+    }
+
     .col-md-0{
         width:0;
     }
@@ -355,7 +360,7 @@ body{
     .col-sm-offset-0{
         margin-left:0;
     }
-    
+
     .col-sm-1{
         width:8.333333333%;
     }

@@ -4,6 +4,8 @@
     <link rel="stylesheet" type="text/css" href="./css/grid.css">
 </head>
 <body>
-<?= 'toto'; ?>
+<div class="grid-container">
+    <h1>Salut</h1>
+</div>
 </body>
 </html>
