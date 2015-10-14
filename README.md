@@ -1,3 +1,24 @@
+# Générer sa key ssh
+```
+$ cd ~/.ssh
+$ ls
+```
+
+`Checker si id_rsa et id_rsa.pub sont présent, si ils ne le sont pas :`
+
+```
+$ ssh-keygen
+
+```
+
+`Lorsque la key est générée :`
+
+```
+$ cat ~/.ssh/id_rsa.pub
+```
+
+`Copiez l'intégralité et mettez la dans l'interface git`
+
 # Comment utiliser git :
 ## Récupérer le repo complet (au début) : 
 ```
