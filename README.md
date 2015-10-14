@@ -34,9 +34,10 @@ https://git-scm.com/documentation
 
 ## Méthodes d'écriture en POO :
 
-`Accolade collée au nom de la classe :`
+`Accolade à la ligne :`
 ```
-class html{
+class html
+{
 
 }
 ```
