@@ -24,5 +24,3 @@ class ArrayHelper
 
     }
 }
-
-ArrayHelper:add('toto');
