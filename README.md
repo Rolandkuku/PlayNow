@@ -74,7 +74,7 @@ public function html
 
 ## Commentez votre code please :D :
 
-`Un exemple d'une fonction (de merde), mais simple à comprendre`
+`Un exemple d'une fonction`
 
 ```
 /**
