@@ -18,6 +18,11 @@ final class ArrayHelper
             die();
         }
 
+        if(array_key_exists($key, $array)){
+            echo 'key already exist in this array';
+            die();
+        }
+
         $array[$key] = $value;
         return $array;
     }
@@ -27,7 +32,7 @@ final class ArrayHelper
      * One contains all keys from the array
      * Other contains all values from the array
      * @param $array
-     * @return mixed
+     * @return array
      */
     public static function divide($array)
     {
@@ -43,13 +48,35 @@ final class ArrayHelper
         return $arrayDivide;
     }
 
-    public static function dot($multidimensionalArray)
-    {
 
+    public static function dot($array)
+    {
+        if(!is_array($array)){
+            echo 'Not an array';
+            die();
+        }
+
+        foreach($array as $key=>$value){
+            if(is_array($array[$key])){
+                echo $value;
+            }
+        }
     }
 
+    /**
+     * Unset a key from array
+     * @param $array
+     * @param $key
+     * @return array
+     */
     public static function except($array, $key)
     {
+        if(!is_array($array)) {
+            echo 'Not an array';
+            die();
+        }
 
+        unset($array[$key]);
+        return $array;
     }
 }

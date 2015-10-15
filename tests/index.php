@@ -6,3 +6,4 @@ require dirname(__DIR__).'/vendor/autoload.php';
 $arrayHelperTest = new Playnow\tests\helper\ArrayHelperTest();
 $arrayHelperTest->addTest();
 $arrayHelperTest->divideTest();
+$arrayHelperTest->exceptTest();

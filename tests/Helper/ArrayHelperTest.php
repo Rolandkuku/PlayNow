@@ -12,7 +12,7 @@ class ArrayHelperTest
         $array = [
             'foo' => 'bar'
         ];
-        $key = 'fooo';
+        $key = 'foo';
         $value = 'barr';
 
         $array = ArrayHelper::add($array, $key, $value);
@@ -35,8 +35,14 @@ class ArrayHelperTest
 
     }
 
-    public static function exceptTest($array, $key)
+    public static function exceptTest()
     {
+        $array = [
+            'foo' => 'bar',
+            'fooo' => 'barr'
+        ];
 
+        $array = ArrayHelper::except($array, 'fooo');
+        var_dump($array);
     }
 }
