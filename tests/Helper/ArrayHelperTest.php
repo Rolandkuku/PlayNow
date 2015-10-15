@@ -8,19 +8,26 @@ class ArrayHelperTest
 {
     public function addTest()
     {
+
         $array = [
             'foo' => 'bar'
         ];
         $key = 'fooo';
         $value = 'barr';
 
-        ArrayHelper::add($array, $key, $value);
+        $array = ArrayHelper::add($array, $key, $value);
         var_dump($array);
     }
 
-    public static function divideTest($array)
+    public static function divideTest()
     {
+        $array = [
+            'foo' => 'bar',
+            'fooo' => 'barr'
+        ];
 
+        $array = ArrayHelper::divide($array);
+        var_dump($array);
     }
 
     public static function dotTest($multidimensionalArray)
