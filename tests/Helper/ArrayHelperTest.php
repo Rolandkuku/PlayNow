@@ -12,7 +12,7 @@ class ArrayHelperTest
         $array = [
             'foo' => 'bar'
         ];
-        $key = 'foo';
+        $key = 'fooo';
         $value = 'barr';
 
         $array = ArrayHelper::add($array, $key, $value);

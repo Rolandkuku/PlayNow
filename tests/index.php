@@ -7,3 +7,17 @@ $arrayHelperTest = new Playnow\tests\helper\ArrayHelperTest();
 $arrayHelperTest->addTest();
 $arrayHelperTest->divideTest();
 $arrayHelperTest->exceptTest();
+
+// PathHelper tests
+$pathHelperTest = new Playnow\tests\helper\PathHelperTest();
+$pathHelperTest->appTest();
+$pathHelperTest->baseTest();
+$pathHelperTest->configTest();
+$pathHelperTest->webTest();
+
+// StringHelper tests
+$stringHelperTest = new Playnow\tests\helper\StringHelperTest();
+$stringHelperTest->startTest();
+$stringHelperTest->endTest();
+$stringHelperTest->containsTest();
+
