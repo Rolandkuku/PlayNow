@@ -2,11 +2,16 @@
 
 namespace Playnow\app\helper;
 
-class ArrayHelper
+abstract class ArrayHelper
 {
-    public static function add($str)
+    public static function add($array, $key, $value)
     {
-        echo $str;
+        if(!isset($array, $key, $value)){
+            echo 'missing parameter';
+            die();
+        }
+
+        $array[$key] = $value;
     }
 
     public static function divide($array)
