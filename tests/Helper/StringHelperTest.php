@@ -9,7 +9,7 @@ class StringHelperTest
     public function startTest()
     {
         $string = 'My name is boxxy';
-        $word = 'y';
+        $word = 'my';
 
         StringHelper::start($string, $word);
     }
@@ -28,5 +28,26 @@ class StringHelperTest
         $word = 'Boxxy';
 
         StringHelper::contains($string, $word);
+    }
+
+    public function limitTest()
+    {
+        $string = 'My name is boxxy';
+        $limit = 6;
+
+        echo StringHelper::limit($string, $limit);
+    }
+
+    public function randomTest()
+    {
+        echo StringHelper::random(10);
+    }
+
+    public function slugTest()
+    {
+        $string = 'My name is boxxy';
+        $glue = '-';
+
+        echo StringHelper::slug($string, $glue);
     }
 }

@@ -20,4 +20,7 @@ $stringHelperTest = new Playnow\tests\helper\StringHelperTest();
 $stringHelperTest->startTest();
 $stringHelperTest->endTest();
 $stringHelperTest->containsTest();
+$stringHelperTest->limitTest();
+$stringHelperTest->randomTest();
+$stringHelperTest->slugTest();
 
