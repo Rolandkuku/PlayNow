@@ -7,7 +7,7 @@ $ ls
 `Checker si id_rsa et id_rsa.pub sont présent, si ils ne le sont pas :`
 
 ```
-$ ssh-keygen
+$ ssh-keygen -t -rsa
 
 ```
 
