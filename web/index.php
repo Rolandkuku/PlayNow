@@ -1,3 +1,9 @@
+<?php
+
+    echo gethostname();
+
+?>
+
 <html>
 <head>
     <title>toto</title>

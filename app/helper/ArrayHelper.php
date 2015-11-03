@@ -2,7 +2,7 @@
 
 namespace Playnow\app\helper;
 
-final class ArrayHelper
+class ArrayHelper
 {
     /**
      * adds a given key / value pair to an array
@@ -47,6 +47,7 @@ final class ArrayHelper
         }
         return $arrayDivide;
     }
+
 
 
     public static function dot($array)

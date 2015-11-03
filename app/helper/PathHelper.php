@@ -2,7 +2,7 @@
 
 namespace Playnow\app\helper;
 
-final class PathHelper
+class PathHelper
 {
     /** Return path to app directory
      * @return string
