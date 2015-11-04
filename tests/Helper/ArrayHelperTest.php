@@ -6,7 +6,7 @@ use Playnow\app\helper\ArrayHelper;
 
 class ArrayHelperTest
 {
-    public function addTest()
+    public static function addTest()
     {
 
         $array = [

@@ -2,7 +2,7 @@
 
 namespace PlayNow\app\controllers;
 
-class PagesController
+class PagesController implements PagesInterface
 {
     public $page;
 

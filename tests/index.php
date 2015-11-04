@@ -17,6 +17,8 @@ $pathHelperTest->webTest();
 
 // StringHelper tests
 $stringHelperTest = new Playnow\tests\helper\StringHelperTest();
+$stringHelperTest->camelCaseTest();
+$stringHelperTest->eTest();
 $stringHelperTest->startTest();
 $stringHelperTest->endTest();
 $stringHelperTest->containsTest();

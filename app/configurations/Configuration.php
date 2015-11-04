@@ -2,11 +2,12 @@
 
 namespace Playnow\app\configurations;
 
-class Configuration
+class Configuration implements ConfigurationInterface
 {
     protected $configurations = [
         'app' => [
             'debug' => true,
+            'cache' => true,
             'url' => '127.0.0.1',
             'maintenance' => false,
         ],
@@ -15,7 +16,7 @@ class Configuration
             'fetch' => \PDO::FETCH_OBJECT,
             'default' => 'default',
             'connections' => [
-                'default' => [
+                'locale' => [
                     'driver' => 'mysql',
                     'host' => 'localhost',
                     'database' => 'playnow',
@@ -24,7 +25,7 @@ class Configuration
                     'charset' => 'utf8',
                     'collation' => 'utf8_unicode_ci'
                 ],
-                'default2' => [
+                'default' => [
                     'driver' => 'mysql',
                     'host' => '127.0.0.1',
                     'database' => 'playnow',
@@ -41,4 +42,9 @@ class Configuration
             'en'
         ]
     ];
+
+    public function getConfigurations()
+    {
+
+    }
 }

@@ -5,6 +5,41 @@ namespace Playnow\app\helper;
 class StringHelper
 {
     /**
+     * Return a string converted to camelCase
+     * @param $string
+     * @param $delimiter
+     * @return string
+     */
+    public static function camelCase($string, $delimiter)
+    {
+        $tmp = explode($delimiter, $string);
+        $i = 0;
+        $array = [];
+
+        foreach($tmp as $value){
+            if($i === 0){
+                $array[0] = strtolower($tmp[0]);
+            } else {
+                $array[$i] = ucfirst($value);
+            }
+            $i++;
+        }
+
+        $return = implode($array);
+        return $return;
+    }
+
+    /**
+     * htmlentities on a string
+     * @param $string
+     * @return string
+     */
+    public static function e($string)
+    {
+        return htmlentities($string);
+    }
+
+    /**
      * Get to know if your string begin with
      * a specific word
      * @param $string
@@ -107,5 +142,26 @@ class StringHelper
         $tmp = explode(' ', $string);
         $string = implode($glue, $tmp);
         return $string;
+    }
+
+    /**
+     * Generate an email to prevent spams
+     * @param $email
+     * @return string
+     */
+    public static function hideEmail($email)
+    {
+        $character_set = '+-.0123456789@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+        $key = str_shuffle($character_set); $cipher_text = ''; $id = 'e'.rand(1,999999999);
+
+        for ($i=0;$i<strlen($email);$i+=1) $cipher_text.= $key[strpos($character_set,$email[$i])];
+
+        $script = 'var a="'.$key.'";var b=a.split("").sort().join("");var c="'.$cipher_text.'";var d="";';
+        $script.= 'for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));';
+        $script.= 'document.getElementById("'.$id.'").innerHTML="<a href=\\"mailto:"+d+"\\" target=\\"_blank\\">"+d+"</a>"';
+        $script = "eval(\"".str_replace(array("\\",'"'),array("\\\\",'\"'), $script)."\")";
+        $script = '<script type="text/javascript">/*<![CDATA[*/'.$script.'/*]]>*/</script>';
+
+        return '<span id="'.$id.'">[javascript protected email address]</span>'.$script;
     }
 }

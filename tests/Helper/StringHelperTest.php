@@ -6,12 +6,27 @@ use Playnow\app\helper\StringHelper;
 
 class StringHelperTest
 {
+    public static function camelCaseTest()
+    {
+        $string = 'my_name_is_boxxy';
+        $delimiter = '_';
+
+        echo StringHelper::camelCase($string, $delimiter);
+    }
+
+    public static function eTest()
+    {
+        $string = 'My name is boxxy';
+
+        echo StringHelper::e($string);
+    }
+
     public function startTest()
     {
         $string = 'My name is boxxy';
         $word = 'my';
 
-        StringHelper::start($string, $word);
+        echo StringHelper::start($string, $word);
     }
 
     public function endTest()
@@ -19,7 +34,7 @@ class StringHelperTest
         $string = 'My name is boxxy';
         $word = 'Boxxy';
 
-        StringHelper::end($string, $word);
+        echo StringHelper::end($string, $word);
     }
 
     public function containsTest()
@@ -27,7 +42,7 @@ class StringHelperTest
         $string = 'My name is boxxy most of you know my video';
         $word = 'Boxxy';
 
-        StringHelper::contains($string, $word);
+        echo StringHelper::contains($string, $word);
     }
 
     public function limitTest()
